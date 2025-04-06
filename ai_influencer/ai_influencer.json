@@ -1,6 +1,6 @@
 {
-    "last_node_id": 65,
-    "last_link_id": 148,
+    "last_node_id": 67,
+    "last_link_id": 151,
     "nodes": [
         {
             "id": 1,
@@ -85,49 +85,6 @@
             },
             "widgets_values": [
                 "vae-ft-mse-840000-ema-pruned.safetensors"
-            ]
-        },
-        {
-            "id": 6,
-            "type": "LoadImage",
-            "pos": [
-                -700.4457397460938,
-                363.9228210449219
-            ],
-            "size": [
-                220,
-                320
-            ],
-            "flags": {},
-            "order": 2,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "shape": 3,
-                    "links": [
-                        77,
-                        125
-                    ],
-                    "slot_index": 0
-                },
-                {
-                    "name": "MASK",
-                    "type": "MASK",
-                    "shape": 3,
-                    "links": null
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "LoadImage"
-            },
-            "widgets_values": [
-                "IMG_20210110_114118.jpg",
-                "image"
             ]
         },
         {
@@ -228,7 +185,7 @@
                 110
             ],
             "flags": {},
-            "order": 3,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -271,7 +228,7 @@
                 {
                     "name": "image",
                     "type": "IMAGE",
-                    "link": 77
+                    "link": 149
                 }
             ],
             "outputs": [
@@ -459,7 +416,7 @@
                     "name": "source_image",
                     "type": "IMAGE",
                     "shape": 7,
-                    "link": 125
+                    "link": 151
                 },
                 {
                     "name": "face_model",
@@ -739,17 +696,46 @@
                 1,
                 1
             ]
+        },
+        {
+            "id": 66,
+            "type": "FSLoadImage",
+            "pos": [
+                -771.7643432617188,
+                351.23681640625
+            ],
+            "size": [
+                315,
+                318
+            ],
+            "flags": {},
+            "order": 3,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "links": [
+                        149,
+                        151
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "aux_id": "FlowScale-AI/flowscale-nodes",
+                "ver": "254f525e1b37c49342ea63cb586e5809add8cac0",
+                "Node name for S&R": "FSLoadImage"
+            },
+            "widgets_values": [
+                "example.png",
+                "image",
+                "Input Image"
+            ]
         }
     ],
     "links": [
-        [
-            77,
-            6,
-            0,
-            20,
-            0,
-            "IMAGE"
-        ],
         [
             116,
             7,
@@ -804,14 +790,6 @@
             0,
             56,
             0,
-            "IMAGE"
-        ],
-        [
-            125,
-            6,
-            0,
-            56,
-            1,
             "IMAGE"
         ],
         [
@@ -909,6 +887,22 @@
             60,
             2,
             "IMAGE"
+        ],
+        [
+            149,
+            66,
+            0,
+            20,
+            0,
+            "IMAGE"
+        ],
+        [
+            151,
+            66,
+            0,
+            56,
+            1,
+            "IMAGE"
         ]
     ],
     "groups": [
@@ -968,10 +962,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.5644739300537774,
+            "scale": 0.5054470284992978,
             "offset": [
-                921.1979060587764,
-                -106.85157321980097
+                979.4462904769337,
+                -89.22546892936862
             ]
         }
     },
