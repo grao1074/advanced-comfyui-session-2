@@ -17,16 +17,6 @@
             "title": "Load VAE"
         }
     },
-    "6": {
-        "inputs": {
-            "image": "IMG_20210110_114118.jpg",
-            "upload": "image"
-        },
-        "class_type": "LoadImage",
-        "_meta": {
-            "title": "Load Image"
-        }
-    },
     "7": {
         "inputs": {
             "text": "closeup IG photo of a man wearing a white suit in a garden\n\nhighly detailed, diffuse light, professional photography, 4k, smiling",
@@ -70,7 +60,7 @@
             "crop_position": "top",
             "sharpening": 0.05,
             "image": [
-                "6",
+                "66",
                 0
             ]
         },
@@ -156,7 +146,7 @@
                 0
             ],
             "source_image": [
-                "6",
+                "66",
                 0
             ]
         },
@@ -244,6 +234,17 @@
         "class_type": "LoraLoader",
         "_meta": {
             "title": "Load LoRA"
+        }
+    },
+    "66": {
+        "inputs": {
+            "image": "example.png",
+            "upload": "image",
+            "label": "Input Image"
+        },
+        "class_type": "FSLoadImage",
+        "_meta": {
+            "title": "[FS]⚡Load Image (Input)"
         }
     }
 }
