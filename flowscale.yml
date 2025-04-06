@@ -39,11 +39,19 @@ workflows:
   - id: znuf43dcjwi
     name: ai_influencer_api.json
     file: ai_influencer/ai_influencer_api.json
-    version: 4
+    version: 5
     description: ''
-    inputs: []
+    inputs:
+      - path: 66.inputs.image
+        label: Input Image
+        parameter_name: image_48812
+        type: string
+        demo_type: image
+        category: input
+        randomize: false
     outputs: []
     skip_preprocess: true
+    advancedConfig: false
   - id: h9wg0bvos6
     name: architecture_visualsation_api.json
     file: architecture/architecture_visualsation_api.json
@@ -96,7 +104,7 @@ normal_workflows:
   - id: dl00hibiwr
     name: ai_influencer.json
     file: ai_influencer/ai_influencer.json
-    version: 4
+    version: 5
   - id: sd90h8jna2d
     name: architecture_visualsation.json
     file: architecture/architecture_visualsation.json
